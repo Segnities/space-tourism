@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import { BrowserRouter } from "react-router-dom";
 
@@ -10,13 +10,16 @@ import { useSelector } from "react-redux";
 
 function App() {
   const backgroundImage = useSelector(
-    (state: { backgroundImage: {backgroundImage:string} }) =>
+    (state: { backgroundImage: { backgroundImage: string } }) =>
       state.backgroundImage.backgroundImage
   );
   console.log(backgroundImage);
   
   return (
-    <div className={styles["App"]} style={{backgroundImage: `url("${backgroundImage}")`}}>
+    <div
+      className={styles["App"]}
+      style={{ backgroundImage: `url("${backgroundImage}")` }}
+    >
       <BrowserRouter>
         <Header />
         <AppRouter />
