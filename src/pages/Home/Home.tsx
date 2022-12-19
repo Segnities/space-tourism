@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import BackgroundHomeDesktop from "./assets/img/background-home-desktop.jpg";
 import BackgroundHomeTablet from "./assets/img/background-home-tablet.jpg";
@@ -8,16 +8,22 @@ import BackgroundHomeMobile from "./assets/img/background-home-mobile.jpg";
 
 import styles from "./assets/css/Home.module.css";
 import { changeBackgroundAction } from "../../store/backgroundImageReducer";
+import { useResizeObserver } from "../../hooks/useResizeObserver";
 
 function Home() {
+  const clientWidth = useResizeObserver();
   const dispatch = useDispatch();
-  const backgroundImage = useSelector(
-    (state: { backgroundImage: string }) => state.backgroundImage
-  );
 
   useEffect(() => {
-    dispatch(changeBackgroundAction(BackgroundHomeDesktop));
-  }, []);
+    dispatch(
+      changeBackgroundAction({
+        desktop: BackgroundHomeDesktop,
+        tablet: BackgroundHomeTablet,
+        mobile: BackgroundHomeMobile,
+        clientWidth,
+      })
+    );
+  }, [clientWidth]);
 
   return (
     <main className={styles["home"]}>
