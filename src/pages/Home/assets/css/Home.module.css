@@ -1,3 +1,82 @@
 .home {
-    background-image: url("../img/background-home-desktop.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 70vh;
+  padding: 0 5vw;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50%;
+}
+
+.content p {
+  color: #D0D6F9;
+  font-weight: 400;
+}
+
+.content p:first-child {
+  font-size: 28px;
+  font-family: "Barlow Condensed";
+}
+
+.content h1 {
+  font-size: 8em;
+  font-family: "Bellefair";
+  font-weight: normal;
+  color: #fff;
+}
+
+.content p:last-child {
+  font-size: 18px;
+  font-family: "Barlow";
+}
+
+.explore {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-btn {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  cursor: pointer;
+  position: relative;
+}
+
+.bubble {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.1;
+
+}
+
+.explore-btn:hover .bubble{
+  background-color: #fff;
+  mix-blend-mode: normal;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-btn span {
+  font-family: "Bellefair";
+  font-size: 32px;
+  z-index: 10;
+  color: #0b0d17;
 }

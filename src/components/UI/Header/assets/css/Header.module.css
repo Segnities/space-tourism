@@ -7,6 +7,8 @@
 }
 
 .logo img {
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   user-select: none;
 }
@@ -19,7 +21,7 @@
   align-items: center;
   height: 96px;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(41px);
 }
 
 .navbar ul {
@@ -41,6 +43,10 @@
 .navbar ul li a:hover {
   height: 100%;
   border-bottom: 3px solid #fff;
+}
+
+.navbar ul li a span {
+  margin-left: 7px;
 }
 
 .line {

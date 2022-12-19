@@ -12,7 +12,9 @@ function Header() {
   return (
     <header className={styles["header"]}>
       <div className={styles["logo"]}>
-        <Link to={"/"}><img src={Logotype} alt="" /></Link>
+        <Link to={"/"}>
+          <img src={Logotype} alt="" />
+        </Link>
       </div>
       <div className={styles["line"]}>
         <hr />
@@ -22,7 +24,7 @@ function Header() {
           {headerLinks.map((link, idx) => (
             <li key={link.id}>
               <Link key={link.id} to={link.to}>
-                <b>0{idx}</b> {link.title.toUpperCase()}
+                <b>0{idx}</b> <span>{link.title.toUpperCase()}</span>
               </Link>
             </li>
           ))}
