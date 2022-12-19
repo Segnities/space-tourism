@@ -3,18 +3,18 @@
   justify-content: center;
   align-items: flex-end;
   height: 70vh;
-  padding: 0 5vw;
+  padding: 0 10vw;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 50%;
+  width: 35%;
 }
 
 .content p {
-  color: #D0D6F9;
+  color: #d0d6f9;
   font-weight: 400;
 }
 
@@ -36,9 +36,9 @@
 }
 
 .explore {
-  width: 50%;
+  width: 65%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -64,10 +64,9 @@
   border-radius: 50%;
   position: absolute;
   opacity: 0.1;
-
 }
 
-.explore-btn:hover .bubble{
+.explore-btn:hover .bubble {
   background-color: #fff;
   mix-blend-mode: normal;
   z-index: 100;
