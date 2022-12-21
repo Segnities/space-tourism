@@ -2,7 +2,6 @@ import React from "react";
 
 import { Link, useLocation } from "react-router-dom";
 
-
 import styles from "./assets/css/Header.module.css";
 import { useResizeObserver } from "../../../hooks/useResizeObserver";
 import Navbar from "../Navbar/Navbar";
@@ -15,9 +14,7 @@ function Header() {
 
   return (
     <header className={styles["header"]}>
-      <div className={styles["logo"]}>
-        <Logo/>
-      </div>
+      <Logo />
       <div className={styles["line"]}>
         <hr />
       </div>

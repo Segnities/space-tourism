@@ -137,3 +137,39 @@
     line-height: 30px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  
+  .content {
+    width: 100%;
+    align-items: center;
+  }
+
+  .content p:last-child {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home {
+    padding: 6vh 10vw;
+  }
+
+  .content h1 {
+    font-size: 75px;
+  }
+
+  .content p:first-child {
+    font-size: 18px;
+  }
+
+  .content p:last-child {
+    font-size: 13px;
+    line-height: 25px;
+  }
+
+  .explore-btn {
+    width: 200px;
+    height: 200px;
+  }
+}
