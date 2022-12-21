@@ -4,9 +4,9 @@
   font-size: 16px;
   display: flex;
   align-items: center;
-  height: 96px;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(41px);
+  height: 96px;
 }
 
 .navbar ul {
@@ -43,4 +43,27 @@
   .navbar ul li a b {
     display: none;
   }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    height: auto;
+    backdrop-filter: none;
+    background-color: transparent;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar ul li a b {
+    display: inline-block;
+  }
+  .navbar ul li a.active {
+    border: none;
+  }
+
+  .navbar ul li a:hover {
+    height: 100%;
+    border: none;
+  }
+
 }
