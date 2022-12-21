@@ -5,7 +5,6 @@ export function useResizeObserver() {
   const [clientWidth, setClientWidth] = useState(0);
 
   const ReziseObserver = new ResizeObserver((entries) => {
-    console.log(entries[0]?.contentRect?.width);
     setClientWidth(entries[0]?.contentRect?.width);
   });
   ReziseObserver.observe(element as HTMLElement);

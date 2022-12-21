@@ -13,7 +13,7 @@
   width: 35%;
 }
 
-.content > *  {
+.content > * {
   margin: 10px 0;
 }
 
@@ -83,4 +83,57 @@
   font-size: 32px;
   z-index: 10;
   color: #0b0d17;
+}
+
+@media screen and (max-width: 1200px) {
+  .home {
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    padding: 10vh 10vw;
+  }
+
+  .explore {
+    width: 100%;
+    justify-content: center;
+    margin-top: 40%;
+  }
+  .bubble {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .content {
+    width: 65%;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 165px;
+  }
+
+  .content p:last-child {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .explore-btn {
+    width: 242px;
+    height: 242px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .content {
+    padding-top: 20%;
+  }
+  .content h1 {
+    font-size: 140px;
+  }
+
+  .content p:last-child {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
