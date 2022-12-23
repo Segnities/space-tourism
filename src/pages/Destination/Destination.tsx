@@ -37,6 +37,9 @@ function Destination() {
         <ul>
           {destinationData.destinations.map((dest) => (
             <li
+              onClick={() => {
+                setSlide(dest);
+              }}
               key={dest.name}
               className={slide.name === dest.name ? styles["active"] : ""}
             >

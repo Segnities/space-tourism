@@ -19,7 +19,7 @@ function App() {
   return (
     <div
       className={styles["App"]}
-    style={{ backgroundImage: `url("${backgroundImage}")` }}
+      style={{ backgroundImage: `url("${backgroundImage}")` }}
     >
       <BrowserRouter>
         {clientWidth > 576 ? <Header /> : <MobileHeader />}

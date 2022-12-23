@@ -20,13 +20,13 @@ function MobileHeader() {
           onClick={() => setIsOpen(!isOpen)}
         />
       </header>
-      <div className={styles["wrapper"]}>
-        {isOpen && (
+      {isOpen && (
+        <div className={styles["wrapper"]}>
           <div className={styles["menu"]}>
             <Navbar />
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 }
