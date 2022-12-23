@@ -1,0 +1,187 @@
+.destination {
+  padding: 15vh 12vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.destination h2 b {
+  color: gray;
+  margin-right: 10px;
+}
+
+.destination-image {
+  width: 445px;
+  height: 445px;
+}
+
+.pick-destination h2 {
+  font-size: 32px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: antiquewhite;
+  font-weight: 300;
+}
+
+.pick-destination img {
+  margin-top: 120px;
+}
+
+.content-desctiption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20%;
+}
+
+.content-desctiption ul {
+  display: flex;
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 21px;
+}
+.content-desctiption ul li {
+  list-style-type: none;
+  cursor: pointer;
+  height: 45px;
+}
+
+.content-desctiption ul > li.active {
+  border-bottom: 3px solid #fff;
+}
+
+.content-desctiption ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.content-desctiption ul li:not(:first-child) {
+  margin-left: 3em;
+}
+
+.content-desctiption h1 {
+  font-size: 100px;
+  font-family: "Bellefair", sans-serif;
+  color: #fff;
+  font-weight: 400;
+}
+
+.content-desctiption p {
+  font-size: 18px;
+  font-family: "Barlow", serif;
+  color: #d0d6f9;
+  line-height: 32px;
+}
+
+.content-desctiption hr {
+  border-top: 2px solid #383b4b;
+  border-bottom: transparent;
+}
+
+.destination-travel-info {
+  display: flex;
+}
+
+.destination-travel-info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-travel-info > div p:first-child {
+  font-size: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.destination-travel-info > div p:last-child {
+  font-size: 28px;
+  font-family: "Bellefair", sans-serif;
+}
+
+.destination-travel-info .travel {
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+  .destination {
+    flex-direction: column;
+    padding: 10vh 5vw;
+  }
+
+  .pick-destination {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pick-destination img {
+    width: 400px;
+    height: 400px;
+    align-self: center;
+  }
+
+  .content-desctiption {
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 5vh;
+  }
+
+  .content-desctiption > * {
+    margin: 15px 0;
+  }
+
+  .content-desctiption h1 {
+    font-size: 5em;
+  }
+
+  .content-desctiption p {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content-desctiption {
+    margin-top: 8vh;
+  }
+  .content-desctiption h1 {
+    font-size: 4em;
+  }
+
+  .pick-destination h2 {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .pick-destination img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .content-desctiption {
+    margin: 0 10px;
+  }
+
+  .content-desctiption ul {
+    font-size: 16px;
+    z-index: 49;
+  }
+
+  .content-desctiption p {
+    font-size: 14px;
+  }
+
+  .content-desctiption ul li:not(:first-child) {
+    margin-left: 2rem;
+  }
+
+  .destination-travel-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .destination-travel-info > * {
+    margin: 15px 0;
+  }
+
+  .destination-travel-info .travel {
+    margin-left: 0;
+  }
+}

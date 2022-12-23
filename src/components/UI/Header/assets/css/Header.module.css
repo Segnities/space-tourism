@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5vh;
   padding-left: 5vw;
 }
 
@@ -58,6 +59,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .header {
+    padding-top: 0;
+  }
   .line {
     display: none;
   }

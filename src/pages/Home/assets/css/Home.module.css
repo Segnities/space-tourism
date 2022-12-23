@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 70vh;
+  height: 65vh;
   padding: 0 10vw;
 }
 
@@ -138,11 +138,18 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  
+@media screen and (max-width: 992px) {
+  .home {
+    margin-top: 5vh;
+  }
+
   .content {
     width: 100%;
     align-items: center;
+  }
+
+  .content p:last-child {
+    font-size: 18px;
   }
 
   .content p:last-child {
@@ -169,7 +176,7 @@
   }
 
   .explore-btn {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 }
