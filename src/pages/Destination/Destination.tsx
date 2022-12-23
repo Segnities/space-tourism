@@ -36,15 +36,26 @@ function Destination() {
       <article className={styles["content-desctiption"]}>
         <ul>
           {destinationData.destinations.map((dest) => (
-            <li key={dest.name}>{dest.name.toUpperCase()}</li>
+            <li
+              key={dest.name}
+              className={slide.name === dest.name ? styles["active"] : ""}
+            >
+              {dest.name.toUpperCase()}
+            </li>
           ))}
         </ul>
         <h1>{slide.name.toUpperCase()}</h1>
         <p>{slide.description}</p>
         <hr />
-        <div>
-          <div>{slide.distance}</div>
-          <div>{slide.travel}</div>
+        <div className={styles["destination-travel-info"]}>
+          <div className={styles["distance"]}>
+            <p>AVG. DISTANCE</p>
+            <p>{slide.distance.toUpperCase()}</p>
+          </div>
+          <div className={styles["travel"]}>
+            <p>EST. TRAVEL TIME</p>
+            <p>{slide.travel.toUpperCase()}</p>
+          </div>
         </div>
       </article>
     </main>

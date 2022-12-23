@@ -44,10 +44,15 @@
 .content-desctiption ul li {
   list-style-type: none;
   cursor: pointer;
+  height: 45px;
+}
+
+.content-desctiption ul > li.active {
+  border-bottom: 3px solid #fff;
 }
 
 .content-desctiption ul li:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .content-desctiption ul li:not(:first-child) {
@@ -65,4 +70,34 @@
   font-size: 18px;
   font-family: "Barlow", serif;
   color: #d0d6f9;
+   line-height: 32px;
+}
+
+.content-desctiption hr {
+  border-top: 2px solid #383B4B;
+  border-bottom: transparent;
+}
+
+.destination-travel-info {
+  display: flex;
+}
+
+.destination-travel-info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.destination-travel-info > div p:first-child {
+  font-size: 16px;
+  font-family: "Barlow Condensed",sans-serif;
+}
+
+.destination-travel-info > div p:last-child {
+  font-size: 28px;
+  font-family: "Bellefair", sans-serif;
+}
+
+.destination-travel-info .travel {
+  margin-left: 3rem;
 }
