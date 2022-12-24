@@ -98,7 +98,7 @@
   margin-left: 3rem;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1110px) {
   .destination {
     flex-direction: column;
     padding: 10vh 5vw;
@@ -132,8 +132,14 @@
 
   .content-desctiption p {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
   }
+}
+
+@media screen and (max-width: 992px) {
+    .content-desctiption p {
+      font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 576px) {
