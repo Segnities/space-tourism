@@ -39,6 +39,7 @@
   margin-left: 7px;
 }
 
+
 @media screen and (max-width: 1200px) {
   .navbar ul li a b {
     display: none;
