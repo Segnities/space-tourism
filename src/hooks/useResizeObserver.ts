@@ -9,5 +9,10 @@ export function useResizeObserver() {
   });
   ReziseObserver.observe(element as HTMLElement);
 
-  return clientWidth;
+  return {
+    clientWidth,
+    isMobile: clientWidth < 560,
+    isTablet: clientWidth > 560 && clientWidth < 992,
+    isDesktop: clientWidth > 992,
+  };
 }

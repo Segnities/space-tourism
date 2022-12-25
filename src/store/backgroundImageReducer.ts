@@ -6,7 +6,7 @@ type actionPayload = {
   desktop: string;
   tablet: string;
   mobile: string;
-  clientWidth: number;
+  resizeObserver: {clientWidth: number, isMobile:boolean, isTablet:boolean, isDesktop:boolean};
 };
 
 export const backgroundImageReducer = (
@@ -18,12 +18,15 @@ export const backgroundImageReducer = (
 ) => {
   if (action.type === CHANGE_BACKGROUND) {
     
-    const clientWidth: number = action.payload.clientWidth;
-    if (clientWidth <= 480) {
+    const isMobile:boolean = action.payload.resizeObserver.isMobile;
+    const isTable: boolean = action.payload.resizeObserver.isTablet;
+    const isDesktop: boolean = action.payload.resizeObserver.isDesktop;
+
+    if (isMobile) {
       return { backgroundImage: action.payload.mobile };
-    } else if (clientWidth > 480 && clientWidth < 1200) {
+    } else if (isTable) {
       return { backgroundImage: action.payload.tablet };
-    } else if (clientWidth >= 1200) {
+    } else if (isDesktop) {
       return { backgroundImage: action.payload.desktop };
     }
   }

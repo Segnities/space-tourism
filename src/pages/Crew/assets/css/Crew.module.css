@@ -1,13 +1,9 @@
 .crew {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 3em;
-  padding-top: 15vh;
+  display: flex;
+  padding-top: 20vh;
   padding-left: 12vw;
   padding-right: 5vw;
 }
-
 
 .member-info {
   display: flex;
@@ -38,7 +34,7 @@
   font-family: "Bellefair", sans-serif;
 }
 
-.member-bio .name { 
+.member-bio .name {
   font-family: "Bellefair", sans-serif;
   font-size: 52px;
   font-style: normal;
@@ -52,8 +48,8 @@
   color: #979797;
   font-family: "Barlow", sans-serif;
   font-size: 18px;
-  line-height: 32px;  
-} 
+  line-height: 32px;
+}
 
 .caurosel {
   display: flex;
@@ -68,7 +64,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #282626;
+  background-color: #403e3e;
 }
 
 .caurosel .slide:first-child {
@@ -88,8 +84,49 @@
   background-color: #fff;
 }
 
-.crew-member-img img {
-  animation: showSlideImage ease-in-out 1s forwards;
+.crew-member-img {
+  animation: ease-in 1s forwards showSlideImage;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .crew {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+  }
+  .member-info {
+    text-align: center;
+    align-items: center;
+  }
+  .member-info h2 {
+    align-self: flex-start;
+    font-size: 20px;
+  }
+  .member-bio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+  }
+  .member-bio .bio {
+    width: 100%;
+  }
+  .crew-member-img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 560px) {  
+ 
+  .crew-member-img {
+    border-bottom: 1px solid #fff;
+  }
+  .crew-member-img img {
+    width: 177px;
+    height: 222px;
+  }
 }
 
 @keyframes showSlideInfo {
