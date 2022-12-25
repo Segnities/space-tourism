@@ -56,16 +56,23 @@ function Caurosel(props: cauroselProps) {
 
 function CrewMobile(props: crewDeviceProps) {
   return (
-    <section className={styles["memberInfo"]}>
+    <section className={styles["member-info"]}>
       <h2>
         <b>0{props.pageIndex}</b> MEET YOUR CREW
       </h2>
-      <div className={styles["member-bio"]}>
-        <img src={props.crewMember.images.png} alt="" />
+        <div className={styles["crew-member-img"]}>
+          <img src={props.crewMember.images.png} alt="" />
+        </div>
         <Caurosel
           crewMember={props.crewMember}
           setCrewMember={props.setCrewMember}
         />
+      <div className={styles["member-bio"]}>
+        <p className={styles["role"]}>{props.crewMember.role.toUpperCase()}</p>
+        <h3 className={styles["name"]}>
+          {props.crewMember.name.toUpperCase()}
+        </h3>
+        <p className={styles["bio"]}>{props.crewMember.bio}</p>
       </div>
     </section>
   );
