@@ -1,5 +1,8 @@
 .destination {
-  padding: 15vh 12vw;
+  padding-top: 15vh;
+  padding-left: 12vw;
+  padding-right: 12vw;
+  padding-bottom: 5vh;
   display: flex;
   justify-content: space-between;
 }
@@ -25,52 +28,53 @@
   margin-top: 120px;
 }
 
-.content-desctiption {
+.content-description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 20%;
 }
 
-.content-desctiption ul {
+.content-description ul {
   display: flex;
   color: #d0d6f9;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 21px;
 }
-.content-desctiption ul li {
+.content-description ul li {
   list-style-type: none;
   cursor: pointer;
   height: 45px;
 }
 
-.content-desctiption ul > li.active {
+.content-description ul > li.active {
   border-bottom: 3px solid #fff;
 }
 
-.content-desctiption ul li:hover {
+.content-description ul li:hover {
   border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 }
 
-.content-desctiption ul li:not(:first-child) {
+.content-description ul li:not(:first-child) {
   margin-left: 3em;
 }
 
-.content-desctiption h1 {
+.content-description h1 {
   font-size: 100px;
   font-family: "Bellefair", sans-serif;
   color: #fff;
   font-weight: 400;
 }
 
-.content-desctiption p {
+.content-description p {
   font-size: 18px;
   font-family: "Barlow", serif;
   color: #d0d6f9;
   line-height: 32px;
+  font-weight: 400;
 }
 
-.content-desctiption hr {
+.content-description hr {
   border-top: 2px solid #383b4b;
   border-bottom: transparent;
 }
@@ -85,13 +89,15 @@
 }
 
 .destination-travel-info > div p:first-child {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Barlow Condensed", sans-serif;
+  color: #d0d6f9;
 }
 
 .destination-travel-info > div p:last-child {
   font-size: 28px;
   font-family: "Bellefair", sans-serif;
+  color: #fff;
 }
 
 .destination-travel-info .travel {
@@ -115,38 +121,38 @@
     align-self: center;
   }
 
-  .content-desctiption {
+  .content-description {
     align-items: center;
     margin-left: 4rem;
     margin-right: 4rem;
     margin-top: 5vh;
   }
 
-  .content-desctiption > * {
+  .content-description > * {
     margin: 15px 0;
   }
 
-  .content-desctiption h1 {
+  .content-descriptionh1 {
     font-size: 5em;
   }
 
-  .content-desctiption p {
+  .content-description p {
     text-align: center;
     font-size: 18px;
   }
 }
 
 @media screen and (max-width: 992px) {
-    .content-desctiption p {
-      font-size: 16px;
-    }
+  content-descriptionp {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-  .content-desctiption {
+  .content-description {
     margin-top: 8vh;
   }
-  .content-desctiption h1 {
+  .content-description h1 {
     font-size: 4em;
   }
 
@@ -160,20 +166,20 @@
     height: 200px;
   }
 
-  .content-desctiption {
+  .content-description {
     margin: 0 10px;
   }
 
-  .content-desctiption ul {
+  .content-description ul {
     font-size: 16px;
     z-index: 49;
   }
 
-  .content-desctiption p {
+  .content-description p {
     font-size: 14px;
   }
 
-  .content-desctiption ul li:not(:first-child) {
+  .content-description ul li:not(:first-child) {
     margin-left: 2rem;
   }
 

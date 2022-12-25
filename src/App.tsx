@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { useResizeObserver } from "./hooks/useResizeObserver";
 
 function App() {
-  const clientWidth = useResizeObserver();
+  const resizeObserver = useResizeObserver();
   const backgroundImage = useSelector(
     (state: { backgroundImage: { backgroundImage: string } }) =>
       state.backgroundImage.backgroundImage
@@ -22,7 +22,7 @@ function App() {
       style={{ backgroundImage: `url("${backgroundImage}")` }}
     >
       <BrowserRouter>
-        {clientWidth > 576 ? <Header /> : <MobileHeader />}
+        {resizeObserver.isDesktop ? <Header /> : <MobileHeader />}
         <AppRouter />
       </BrowserRouter>
     </div>

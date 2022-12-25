@@ -13,7 +13,8 @@ import styles from "./assets/css/Destination.module.css";
 
 function Destination() {
   const pageIndex = useFindPageIndex();
-  const [slide, setSlide] = useState(destinationData.destinations[0]);
+  const [destination, setDestination] = useState(destinationData.destinations[0]);
+  
   useBackgroundChange({
     backgroundHomeDesktop: DestinationDesktop,
     backgroundHomeTablet: DestinationTablet,
@@ -27,37 +28,37 @@ function Destination() {
           <b>0{pageIndex}</b> PICK YOUR DESTINATION
         </h2>
         <img
-          src={slide.images.png}
+          src={destination.images.png}
           alt=""
           className={styles["destination-image"]}
           onDragStart={(e) => e.preventDefault()}
         />
       </section>
-      <article className={styles["content-desctiption"]}>
+      <article className={styles["content-description"]}>
         <ul>
           {destinationData.destinations.map((dest) => (
             <li
               onClick={() => {
-                setSlide(dest);
+                setDestination(dest);
               }}
               key={dest.name}
-              className={slide.name === dest.name ? styles["active"] : ""}
+              className={destination.name === dest.name ? styles["active"] : ""}
             >
               {dest.name.toUpperCase()}
             </li>
           ))}
         </ul>
-        <h1>{slide.name.toUpperCase()}</h1>
-        <p>{slide.description}</p>
+        <h1>{destination.name.toUpperCase()}</h1>
+        <p>{destination.description}</p>
         <hr />
         <div className={styles["destination-travel-info"]}>
           <div className={styles["distance"]}>
             <p>AVG. DISTANCE</p>
-            <p>{slide.distance.toUpperCase()}</p>
+            <p>{destination.distance.toUpperCase()}</p>
           </div>
           <div className={styles["travel"]}>
             <p>EST. TRAVEL TIME</p>
-            <p>{slide.travel.toUpperCase()}</p>
+            <p>{destination.travel.toUpperCase()}</p>
           </div>
         </div>
       </article>

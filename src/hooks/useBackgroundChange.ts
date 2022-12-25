@@ -11,7 +11,7 @@ export const useBackgroundChange = (background: {
   backgroundHomeTablet: string;
   backgroundHomeMobile: string;
 }) => {
-  const clientWidth = useResizeObserver();
+  const resizeObserver = useResizeObserver();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export const useBackgroundChange = (background: {
         desktop: background.backgroundHomeDesktop,
         tablet: background.backgroundHomeTablet,
         mobile: background.backgroundHomeMobile,
-        clientWidth,
+        resizeObserver 
       })
     );
-  }, [clientWidth]);
+  }, [resizeObserver.clientWidth]);
 };
