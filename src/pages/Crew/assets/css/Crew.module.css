@@ -121,6 +121,12 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .caurosel .slide {
+    background-color: rgb(128, 123, 123);
+  }
+}
+
 @media screen and (min-width: 560px) and (max-width: 992px) {
 
   .crew {
