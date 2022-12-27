@@ -118,9 +118,9 @@ function Crew() {
   const deviceProps = { pageIndex, crewMember, setCrewMember };
 
   useBackgroundChange({
-    backgroundHomeDesktop: CrewDesktopBackground,
-    backgroundHomeTablet: CrewTabletBackground,
-    backgroundHomeMobile: CrewMobileBackground,
+    backgroundDesktop: CrewDesktopBackground,
+    backgroundTablet: CrewTabletBackground,
+    backgroundMobile: CrewMobileBackground,
   });
 
   return (

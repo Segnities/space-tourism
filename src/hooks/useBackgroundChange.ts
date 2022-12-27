@@ -7,9 +7,9 @@ import { changeBackgroundAction } from "../store/backgroundImageReducer";
 import { useResizeObserver } from "./useResizeObserver";
 
 export const useBackgroundChange = (background: {
-  backgroundHomeDesktop: string;
-  backgroundHomeTablet: string;
-  backgroundHomeMobile: string;
+  backgroundDesktop: string;
+  backgroundTablet: string;
+  backgroundMobile: string;
 }) => {
   const resizeObserver = useResizeObserver();
   const dispatch = useDispatch();
@@ -17,9 +17,9 @@ export const useBackgroundChange = (background: {
   useEffect(() => {
     dispatch(
       changeBackgroundAction({
-        desktop: background.backgroundHomeDesktop,
-        tablet: background.backgroundHomeTablet,
-        mobile: background.backgroundHomeMobile,
+        desktop: background.backgroundDesktop,
+        tablet: background.backgroundTablet,
+        mobile: background.backgroundMobile,
         resizeObserver 
       })
     );

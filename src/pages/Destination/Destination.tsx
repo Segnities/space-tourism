@@ -16,9 +16,9 @@ function Destination() {
   const [destination, setDestination] = useState(destinationData.destinations[0]);
   
   useBackgroundChange({
-    backgroundHomeDesktop: DestinationDesktop,
-    backgroundHomeTablet: DestinationTablet,
-    backgroundHomeMobile: DestinationMobile,
+    backgroundDesktop: DestinationDesktop,
+    backgroundTablet: DestinationTablet,
+    backgroundMobile: DestinationMobile,
   });
 
   return (

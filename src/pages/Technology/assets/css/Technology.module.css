@@ -1,0 +1,76 @@
+.technology {
+  display: flex;
+  padding-top: 15vh;
+  padding-left: 12vw;
+  padding-bottom: 15vh;
+  flex-direction: column;
+}
+
+.slide {
+  width: 80px;
+  font-family: "Bellefair", sans-serif;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #ffff;
+  cursor: pointer;
+  margin: 30px 0;
+
+}
+
+.caurosel .active {
+  background-color: #fff;
+  color: #000;
+}
+
+.technology h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+}
+
+.technology h2 b {
+  color: gray;
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.technology-description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 9vw;
+}
+
+.technology-description > * {
+  margin: 5px 0;
+}
+
+.technology-description p:first-child {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  color: grey;
+}
+
+.technology-description h1 {
+  font-family: "Bellefair", sans-serif;
+  font-size: 56px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.technology-description p:last-child {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: grey;
+  line-height: 32px;
+}
