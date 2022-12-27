@@ -20,7 +20,6 @@
   border: 1px solid #ffff;
   cursor: pointer;
   margin: 30px 0;
-
 }
 
 .caurosel .active {
@@ -48,7 +47,7 @@
 .technology-description {
   display: flex;
   flex-direction: column;
-  padding: 0 9vw;
+  padding: 0 8vw;
 }
 
 .technology-description > * {
@@ -63,7 +62,7 @@
 
 .technology-description h1 {
   font-family: "Bellefair", sans-serif;
-  font-size: 56px;
+  font-size: 54px;
   color: #fff;
   font-weight: normal;
 }
@@ -73,4 +72,87 @@
   font-size: 18px;
   color: grey;
   line-height: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  .technology {
+    padding-top: 0;
+    padding-bottom: 5vh;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .technology h2 {
+    margin: 5vh 5vw;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .img {
+    width: 100%;
+    order: 0;
+  }
+
+  .img img {
+    width: 100%;
+  }
+
+  .caurosel {
+    display: flex;
+    order: 1;
+  }
+  .caurosel .slide {
+    margin: 3rem 1rem;
+  }
+  .technology-description {
+    order: 2;
+    align-items: center;
+  }
+  .technology-description > p {
+    text-align: center;
+    width: 100%;
+  }
+  .slide {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .technology-description p:first-child {
+    font-size: 16px;
+  }
+
+  .technology-description h1 {
+    font-size: 32px;
+  }
+
+  .technology-description p:last-child {
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .technology-description p:first-child {
+    font-size: 14px;
+  }
+
+  .technology-description h1 {
+    font-size: 24px;
+  }
+
+  .technology-description p:last-child {
+    font-size: 15px;
+  }
+
+  .slide {
+    width: 40px;
+    height: 40px;
+  }
+
 }
