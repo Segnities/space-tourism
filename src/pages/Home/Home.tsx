@@ -10,9 +10,9 @@ import styles from "./assets/css/Home.module.css";
 
 function Home() {
   useBackgroundChange({
-    backgroundHomeDesktop: BackgroundHomeDesktop,
-    backgroundHomeTablet: BackgroundHomeTablet,
-    backgroundHomeMobile: BackgroundHomeMobile,
+    backgroundDesktop: BackgroundHomeDesktop,
+    backgroundTablet: BackgroundHomeTablet,
+    backgroundMobile: BackgroundHomeMobile,
   });
 
   return (

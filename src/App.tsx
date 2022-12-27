@@ -16,13 +16,14 @@ function App() {
     (state: { backgroundImage: { backgroundImage: string } }) =>
       state.backgroundImage.backgroundImage
   );
+  
   return (
     <div
       className={styles["App"]}
       style={{ backgroundImage: `url("${backgroundImage}")` }}
     >
       <BrowserRouter>
-        {resizeObserver.isDesktop ? <Header /> : <MobileHeader />}
+        {resizeObserver.isDesktop || resizeObserver.isTablet ? <Header /> : <MobileHeader />}
         <AppRouter />
       </BrowserRouter>
     </div>

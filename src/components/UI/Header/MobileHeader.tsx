@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 import Logo from "../Logo/Logo";
+import Navbar from "../Navbar/Navbar";
 
 import BurgerMenu from "./assets/img/icon-hamburger.svg";
 import CloseBurgerMenu from "./assets/img/icon-close.svg";
 
 import styles from "./assets/css/Header.module.css";
-import Navbar from "../Navbar/Navbar";
 
 function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);

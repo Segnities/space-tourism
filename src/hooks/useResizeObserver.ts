@@ -11,8 +11,8 @@ export function useResizeObserver() {
 
   return {
     clientWidth,
-    isMobile: clientWidth < 560,
-    isTablet: clientWidth > 560 && clientWidth < 992,
-    isDesktop: clientWidth > 992,
+    isMobile: clientWidth <= 560,
+    isTablet: clientWidth > 560 && clientWidth < 1200,
+    isDesktop: clientWidth >= 1200,
   };
 }
