@@ -31,15 +31,23 @@ function Technology() {
       <div className={styles["container"]}>
         <div className={styles["caurosel"]}>
           {technologyData.technology.map((tech, idx) => (
-            <div className={`${styles["slide"]} ${tech.name === technology.name ? styles["active"] : ""}`} key={tech.name} onClick={() => setTechnology(tech)}>{idx + 1}</div>
+            <div
+              className={`${styles["slide"]} ${
+                tech.name === technology.name ? styles["active"] : ""
+              }`}
+              key={tech.name}
+              onClick={() => setTechnology(tech)}
+            >
+              {idx + 1}
+            </div>
           ))}
         </div>
         <div className={styles["technology-description"]}>
-          <p>THE TECHNOLOGY ...</p>
-          <h1 className="name">{technology.name}</h1>
+          <p>THE TECHNOLOGY...</p>
+          <h1 className={styles["name"]}>{technology.name.toUpperCase()}</h1>
           <p>{technology.description}</p>
         </div>
-        <div className="img">
+        <div className={styles["img"]}>
           <img
             src={
               resizeObserver.isDesktop
